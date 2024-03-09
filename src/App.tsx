@@ -95,6 +95,7 @@ function App() {
     }
 
     function removeTodolist(id: string) {
+        debugger
         // засунем в стейт список тудулистов, id которых не равны тому, который нужно выкинуть
         setTodolists(todolists.filter(tl => tl.id != id));
         // удалим таски для этого тудулиста из второго стейта, где мы храним отдельно таски
