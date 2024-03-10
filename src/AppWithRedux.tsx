@@ -1,4 +1,4 @@
-import React, {useReducer, useState} from 'react';
+import React, {useReducer} from 'react';
 import './App.css';
 import {TaskType, Todolist} from './Todolist';
 import {v1} from 'uuid';
@@ -17,6 +17,7 @@ import {addTaskAC, changeTaskStatusAC, changeTaskTitleAC, removeTaskAC, tasksRed
 
 
 export type FilterValuesType = "all" | "active" | "completed";
+
 export type TodolistType = {
     id: string
     title: string
@@ -28,7 +29,7 @@ export type TasksStateType = {
 }
 
 
-function App() {
+function AppWithRedux() {
     let todolistId1 = v1();
     let todolistId2 = v1();
 
@@ -145,4 +146,4 @@ function App() {
     );
 }
 
-export default App;
+export default AppWithRedux;
